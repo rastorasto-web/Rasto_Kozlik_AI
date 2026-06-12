@@ -127,6 +127,21 @@
         @keyframes marquee-scroll { to { transform: translateX(-50%); } }
         @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; } }
 
+        /* ===== Čisté pole pod textom v bodkovaných sekciách ===== */
+        /* Maska vyhladí bodky v zóne, kde je text – bodky zostanú len po okrajoch */
+        .dots-fade-top {
+            -webkit-mask-image: radial-gradient(ellipse 62% 46% at 50% 22%, transparent 0%, transparent 58%, black 85%);
+                    mask-image: radial-gradient(ellipse 62% 46% at 50% 22%, transparent 0%, transparent 58%, black 85%);
+        }
+        .dots-fade-center {
+            -webkit-mask-image: radial-gradient(ellipse 68% 78% at 50% 50%, transparent 0%, transparent 58%, black 88%);
+                    mask-image: radial-gradient(ellipse 68% 78% at 50% 50%, transparent 0%, transparent 58%, black 88%);
+        }
+        .dots-fade-left {
+            -webkit-mask-image: radial-gradient(ellipse 62% 64% at 35% 42%, transparent 0%, transparent 52%, black 82%);
+                    mask-image: radial-gradient(ellipse 62% 64% at 35% 42%, transparent 0%, transparent 52%, black 82%);
+        }
+
         /* ===== Scroll-reveal ===== */
         .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
         .reveal.is-visible { opacity: 1; transform: none; }
@@ -220,7 +235,7 @@
 
 <!-- ===== Hero ===== -->
 <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-    <div class="absolute inset-0 z-0 opacity-5 dark:opacity-[0.07] bg-[radial-gradient(#E60000_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="dots-fade-left absolute inset-0 z-0 opacity-5 dark:opacity-[0.07] bg-[radial-gradient(#E60000_1px,transparent_1px)] [background-size:16px_16px]"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="flex flex-col lg:flex-row items-center gap-12">
             <div class="lg:w-1/2 space-y-8">
@@ -325,7 +340,7 @@
 
 <!-- ===== FLAGSHIP: AI tréner na prenájom ===== -->
 <section id="ai-trener" class="relative py-24 bg-[#080808] text-white overflow-hidden">
-    <div class="absolute inset-0 opacity-[0.06] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:22px_22px]"></div>
+    <div class="dots-fade-top absolute inset-0 opacity-[0.06] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:22px_22px]"></div>
     <div class="absolute -top-32 -right-32 w-96 h-96 bg-[#E60000] rounded-full mix-blend-screen filter blur-[120px] opacity-30"></div>
     <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-[#E60000] rounded-full mix-blend-screen filter blur-[140px] opacity-20"></div>
 
@@ -479,7 +494,7 @@
 
 <!-- ===== Uzatvárací CTA blok ===== -->
 <section class="py-20 bg-gradient-to-br from-[#E60000] to-[#AA0000] text-white relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:24px_24px]"></div>
+    <div class="dots-fade-center absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1.5px,transparent_1.5px)] [background-size:24px_24px]"></div>
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h2 class="text-3xl lg:text-4xl font-extrabold mb-4">Posuňte efektivitu vašich tímov na novú úroveň</h2>
         <p class="text-lg text-red-100 mb-10 max-w-2xl mx-auto">Poďme sa nezáväzne porozprávať o možnostiach pre vašu firmu. Vyberte si, ako vám to viac vyhovuje.</p>
@@ -596,7 +611,7 @@
 
 <!-- ===== Prínos ===== -->
 <section id="prinos" class="py-20 bg-[#000000] text-white relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]"></div>
+    <div class="dots-fade-top absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]"></div>
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <h2 class="text-3xl lg:text-4xl font-bold mb-6">Prečo sa firmám oplatí <br><span class="text-[#E60000]">poslať ľudí na môj workshop?</span></h2>
         <p class="text-[#D1D5DB] text-lg mb-12 leading-relaxed max-w-2xl mx-auto">
@@ -826,7 +841,7 @@
 
 <!-- ===== AI Prompt Knižnica (zber emailov) ===== -->
 <section id="prompty" class="py-24 bg-white dark:bg-[#0a0a0a] relative overflow-hidden">
-    <div class="absolute inset-0 z-0 opacity-5 dark:opacity-[0.07] bg-[radial-gradient(#E60000_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="dots-fade-top absolute inset-0 z-0 opacity-5 dark:opacity-[0.07] bg-[radial-gradient(#E60000_1px,transparent_1px)] [background-size:16px_16px]"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-14">
             <span class="inline-flex items-center gap-2 bg-red-50 dark:bg-red-950/40 text-[#E60000] text-xs font-bold tracking-widest uppercase px-5 py-2 rounded-full border border-red-100 dark:border-red-900/50">
