@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Google I/O 2026: čo nové oznámenia znamenajú pre vašu firmu | Rasťo Kozlík</title>
+    <meta name="description" content="Gemini 4, AI agenti v Androide, generovanie videa a chytrejší Gmail. Prehľad hlavných tém Google I/O 2026 z pohľadu firemnej praxe – čo sledovať a čo skúsiť ako prvé.">
+    <meta name="robots" content="index, follow">
+    <!-- ⚠️ NAHRAĎ doménou po nasadení -->
+    <link rel="canonical" href="https://VASA-DOMENA.sk/clanky/google-io-2026.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="sk_SK">
+    <meta property="og:title" content="Google I/O 2026: čo nové oznámenia znamenajú pre vašu firmu">
+    <meta property="og:description" content="Gemini 4, AI agenti v Androide, generovanie videa a chytrejší Gmail – prehľad z pohľadu firemnej praxe.">
+    <meta property="og:url" content="https://VASA-DOMENA.sk/clanky/google-io-2026.html">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' };</script>
+    <script>
+        try {
+            const s = localStorage.getItem('rk-theme');
+            if (s === 'dark' || (!s && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+        } catch (e) {}
+    </script>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <style>
+        .icon { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .art h2 { font-size: 1.6rem; line-height: 1.3; font-weight: 800; margin: 2.4rem 0 1rem; }
+        .art h3 { font-size: 1.2rem; font-weight: 700; margin: 1.8rem 0 .7rem; }
+        .art p  { margin: 0 0 1.1rem; line-height: 1.75; }
+        .art ul, .art ol { margin: 0 0 1.2rem 1.4rem; line-height: 1.7; }
+        .art ul { list-style: disc; }
+        .art ol { list-style: decimal; }
+        .art li { margin-bottom: .45rem; }
+        .art strong { font-weight: 700; }
+        .art .tip { border-left: 4px solid #E60000; padding: .9rem 1.2rem; border-radius: 0 .75rem .75rem 0; margin: 1.4rem 0; }
+        .gated-locked { max-height: 480px; overflow: hidden; }
+        .gated-locked > * { filter: blur(6px); user-select: none; pointer-events: none; }
+    </style>
+</head>
+<body class="font-sans text-[#333333] dark:text-gray-300 bg-white dark:bg-[#0a0a0a] min-h-screen transition-colors duration-300">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+</svg>
+
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-[#0a0a0a]/90 backdrop-blur border-b border-gray-100 dark:border-gray-800 py-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <a href="../index.html" class="flex items-center gap-2 font-bold text-xl tracking-tighter text-black dark:text-white">
+            <span>Rasťo <span class="text-[#E60000]">Kozlík</span></span> <span class="hidden sm:inline text-[#54595F] font-light">|</span> <span class="hidden sm:inline text-xs uppercase tracking-widest font-medium mt-1 text-[#54595F] dark:text-gray-400">AI Konzultant</span>
+        </a>
+        <div class="flex items-center gap-3">
+            <a href="../index.html#clanky" class="flex items-center gap-2 text-sm font-medium text-[#333333] dark:text-gray-300 hover:text-[#E60000] transition-colors">
+                <svg class="icon w-4 h-4"><use href="#i-back"/></svg> Všetky články
+            </a>
+            <button data-theme-toggle aria-label="Prepnúť svetlý/tmavý režim" class="p-2 rounded-full text-[#333333] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                <svg class="icon w-5 h-5 hidden dark:block"><use href="#i-sun"/></svg>
+                <svg class="icon w-5 h-5 dark:hidden"><use href="#i-moon"/></svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<main>
+<article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+
+    <header class="mb-10">
+        <span class="inline-flex items-center gap-2 bg-red-50 dark:bg-red-950/40 text-[#E60000] text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full border border-red-100 dark:border-red-900/50">Novinky</span>
+        <h1 class="text-3xl lg:text-5xl font-extrabold text-black dark:text-white mt-5 leading-tight">Google I/O 2026: čo nové oznámenia znamenajú pre vašu firmu</h1>
+        <div class="flex items-center gap-4 mt-5 text-sm text-[#54595F] dark:text-gray-400">
+            <span class="flex items-center gap-1.5"><svg class="icon w-4 h-4"><use href="#i-clock"/></svg> 7 min čítania</span>
+            <span>·</span><span>Máj 2026</span>
+            <span>·</span><span>Rasťo Kozlík</span>
+        </div>
+    </header>
+
+    <div class="art text-[17px]">
+        <p class="text-lg font-medium text-black dark:text-white">Google I/O je každoročná konferencia, na ktorej Google ukazuje, kam smerujú jeho produkty – a keďže Gmail, Android, vyhľadávanie či YouTube používa prakticky každá firma, oplatí sa vedieť, čo prichádza. Ročník 2026 (19. mája) sa niesol v jednom znamení: AI prestáva byť funkciou navyše a stáva sa základom všetkých produktov.</p>
+
+        <p>Nebudem vás zaťažovať vývojárskymi detailmi. Tu je prehľad tém, ktoré majú dosah na bežnú firemnú prax – a moje odporúčanie, čo z toho sledovať a čo rovno skúsiť.</p>
+
+        <h2 class="text-black dark:text-white">Hlavné témy v skratke</h2>
+        <ul>
+            <li><strong>Gemini 4</strong> – nová generácia modelu s výrazne väčším kontextom: AI zvládne naraz spracovať celé archívy dokumentov či komunikácie.</li>
+            <li><strong>AI agenti v Androide</strong> – asistent, ktorý úlohy nielen poradí, ale aj vykoná naprieč aplikáciami.</li>
+            <li><strong>Veo 3</strong> – generovanie videa s lepšou kvalitou a zvukom, použiteľné na firemný obsah.</li>
+            <li><strong>Chytrejší Gmail a Workspace</strong> – automatické návrhy odpovedí, sumarizácie a tvorba prezentácií z textu.</li>
+        </ul>
+    </div>
+
+    <div id="gate-wrap" class="relative">
+        <div id="gated" class="gated-locked art text-[17px]">
+
+            <h2 class="text-black dark:text-white">Gemini 4: obrovský kontext mení prácu s dokumentmi</h2>
+            <p>Najväčšou témou je nová generácia modelu Gemini s mnohonásobne väčším kontextovým oknom. Prakticky to znamená, že AI dokáže naraz „prečítať“ množstvo dokumentov – celú zložku zmlúv, ročnú e-mailovú históriu s klientom, kompletnú internú dokumentáciu – a odpovedať s ohľadom na celok, nie na jeden súbor.</p>
+            <p>Pre HR a backoffice je to zaujímavé pri auditoch dokumentácie, onboardingových materiáloch či vyhľadávaní v interných smerniciach. Pre sales pri príprave na rokovanie s klientom, s ktorým máte roky histórie.</p>
+
+            <h2 class="text-black dark:text-white">AI agenti v Androide: od rady k vykonaniu</h2>
+            <p>Druhý veľký posun: asistent v telefóne má úlohy nielen navrhovať, ale aj vykonávať – rezervácie, správy, vyhľadanie a porovnanie možností, to celé naprieč aplikáciami na jeden pokyn.</p>
+            <div class="tip bg-red-50/60 dark:bg-red-950/20">
+                <p class="!mb-0"><strong>Môj pohľad:</strong> agenti sú najväčší trend roka 2026, ale do firemného prostredia ich púšťajte s rozmyslom. Platí zásada, ktorú opakujem na každom školení – AI navrhuje a vykonáva rutinu, <strong>človek rozhoduje a schvaľuje</strong>. Agent, ktorý sám odosiela správy v mene firmy bez kontroly, je riziko, nie úspora.</p>
+            </div>
+
+            <h2 class="text-black dark:text-white">Veo 3: video obsah bez produkčného tímu</h2>
+            <p>Generovanie videa pokročilo do bodu, keď z textového zadania vznikne krátke video vrátane zvuku. Pre marketing a HR značku zamestnávateľa to znamená možnosť tvoriť obsah na sociálne siete bez kamery a strihača. Kvalita zatiaľ nestačí na TV spot, na LinkedIn či kariérnu stránku áno.</p>
+
+            <h2 class="text-black dark:text-white">Gmail a Workspace: úspora v dennej rutine</h2>
+            <p>Najrýchlejší reálny prínos pre väčšinu firiem bude v nástrojoch, ktoré už ľudia používajú:</p>
+            <ul>
+                <li>Automatické zhrnutie dlhých e-mailových vlákien a návrhy odpovedí v Gmaili.</li>
+                <li>Generovanie prezentácie z textového podkladu v Google Prezentáciách.</li>
+                <li>Sumarizácia dokumentov a návrhy úprav v Google Dokumentoch a Tabuľkách.</li>
+            </ul>
+            <p>Ak vaša firma beží na Google Workspace, toto sú funkcie, ktoré sa oplatí zapnúť a zaškoliť ako prvé – návratnosť je okamžitá a riziko minimálne.</p>
+
+            <h2 class="text-black dark:text-white">Čo to znamená pre slovenské firmy</h2>
+            <ol>
+                <li><strong>Nečakajte na dokonalosť.</strong> Funkcie prichádzajú postupne a často najprv v angličtine. Tímy, ktoré si návyky budujú už teraz, budú mať náskok, keď novinky dorazia v plnej sile.</li>
+                <li><strong>Vyberajte podľa svojho prostredia.</strong> Firma na Microsoft 365 nech sleduje Copilot, firma na Google Workspace nech zapína Gemini. Miešať ekosystémy kvôli jednej funkcii sa zriedka oplatí.</li>
+                <li><strong>Pripravte pravidlá skôr, ako prídu agenti.</strong> Keď AI začne úlohy vykonávať namiesto navrhovania, firma bez jasných pravidiel (čo smie AI robiť sama a čo schvaľuje človek) bude mať problém.</li>
+            </ol>
+
+            <h2 class="text-black dark:text-white">Vyskúšajte ešte dnes</h2>
+            <ol>
+                <li>Pozrite si záznam keynote – stačí na YouTube vyhľadať „Google I/O 2026 keynote“. Dve hodiny, všetko podstatné.</li>
+                <li>Ak používate Gmail, otestujte AI zhrnutie najdlhšieho vlákna vo vašej schránke.</li>
+                <li>Na gemini.google.com si vyskúšajte aktuálny model na jednej reálnej pracovnej úlohe.</li>
+            </ol>
+            <p>Novinky z konferencií sú zaujímavé, ale hodnotu vytvára až ich použitie na vašich úlohách. Začnite malým krokom – ideálne ešte tento týždeň.</p>
+        </div>
+
+        <div id="gate-overlay" class="absolute inset-x-0 bottom-0 pt-40 bg-gradient-to-t from-white via-white/95 to-transparent dark:from-[#0a0a0a] dark:via-[#0a0a0a]/95">
+            <div class="max-w-xl mx-auto bg-gray-50 dark:bg-[#141414] rounded-3xl border border-gray-200 dark:border-gray-800 p-8 shadow-xl">
+                <div class="flex items-center justify-center gap-2 text-[#E60000] mb-3"><svg class="icon w-5 h-5"><use href="#i-lock"/></svg><span class="text-xs font-bold tracking-widest uppercase">Pokračovanie článku</span></div>
+                <h3 class="text-xl font-bold text-black dark:text-white mb-2 text-center">Odomknite si celý článok zadarmo</h3>
+                <p class="text-sm text-[#54595F] dark:text-gray-400 text-center mb-6">Zadajte e-mail a okamžite sa vám odomknú všetky články na tomto webe.</p>
+                <form id="gate-form" novalidate>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <label for="gate-email" class="sr-only">Váš e-mail</label>
+                        <input type="email" id="gate-email" name="email" required placeholder="vas@email.sk"
+                            class="flex-grow px-5 py-3.5 rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-[#0f0f0f] text-black dark:text-white focus:border-[#E60000] focus:outline-none transition-colors">
+                        <button type="submit" id="gate-submit"
+                            class="bg-[#E60000] hover:bg-[#C80000] disabled:opacity-60 disabled:cursor-not-allowed text-white px-7 py-3.5 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl whitespace-nowrap">
+                            Odomknúť článok
+                        </button>
+                    </div>
+                    <label class="flex items-start gap-3 mt-4 cursor-pointer">
+                        <input type="checkbox" id="gate-consent" required class="mt-1 w-4 h-4 accent-[#E60000]">
+                        <span class="text-xs text-[#54595F] dark:text-gray-400 leading-relaxed">
+                            Súhlasím so spracovaním e-mailovej adresy na sprístupnenie obsahu a občasných praktických AI tipov. Odhlásiť sa môžete kedykoľvek. Viac v <a href="../ochrana-sukromia.html" class="underline hover:text-[#E60000]">zásadách ochrany súkromia</a>.
+                        </span>
+                    </label>
+                    <p id="gate-status" class="hidden"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <aside class="mt-14 bg-gradient-to-br from-[#E60000] to-[#AA0000] text-white rounded-3xl p-8 lg:p-10">
+        <h2 class="text-2xl font-extrabold mb-3">Nestíhate sledovať AI novinky?</h2>
+        <p class="text-white/90 mb-6 leading-relaxed">To je v poriadku – od toho som tu ja. Na workshopoch a 1:1 konzultáciách filtrujem novinky na to, čo má pre vašu firmu reálnu hodnotu, a rovno to nastavíme v praxi.</p>
+        <a href="../index.html#konzultacie" class="inline-block bg-white text-[#E60000] px-7 py-3.5 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">Konzultácia 1:1 →</a>
+    </aside>
+</article>
+</main>
+
+<footer class="border-t border-gray-100 dark:border-gray-800 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-[#54595F] dark:text-gray-500">
+        <p>© <span data-year></span> Rasťo Kozlík · AI Konzultant. Všetky práva vyhradené.</p>
+        <span class="hidden sm:inline text-gray-300 dark:text-gray-700">|</span>
+        <a href="../ochrana-sukromia.html" class="underline hover:text-[#E60000]">Ochrana súkromia a cookies</a>
+    </div>
+</footer>
+
+<script src="./gate.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ako začať s AI: sprievodca pre úplných začiatočníkov | Rasťo Kozlík</title>
+    <meta name="description" content="Praktický sprievodca prvými krokmi s umelou inteligenciou: ktoré nástroje vyskúšať, ako písať zadania a ako z AI vyťažiť maximum bez technických znalostí.">
+    <meta name="robots" content="index, follow">
+    <!-- ⚠️ NAHRAĎ doménou po nasadení -->
+    <link rel="canonical" href="https://VASA-DOMENA.sk/clanky/ako-zacat-s-ai.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="sk_SK">
+    <meta property="og:title" content="Ako začať s AI: sprievodca pre úplných začiatočníkov">
+    <meta property="og:description" content="Ktoré nástroje vyskúšať ako prvé, ako písať zadania a ako z AI vyťažiť maximum bez technických znalostí.">
+    <meta property="og:url" content="https://VASA-DOMENA.sk/clanky/ako-zacat-s-ai.html">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' };</script>
+    <script>
+        try {
+            const s = localStorage.getItem('rk-theme');
+            if (s === 'dark' || (!s && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+        } catch (e) {}
+    </script>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <style>
+        .icon { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .art h2 { font-size: 1.6rem; line-height: 1.3; font-weight: 800; margin: 2.4rem 0 1rem; }
+        .art h3 { font-size: 1.2rem; font-weight: 700; margin: 1.8rem 0 .7rem; }
+        .art p  { margin: 0 0 1.1rem; line-height: 1.75; }
+        .art ul, .art ol { margin: 0 0 1.2rem 1.4rem; line-height: 1.7; }
+        .art ul { list-style: disc; }
+        .art ol { list-style: decimal; }
+        .art li { margin-bottom: .45rem; }
+        .art strong { font-weight: 700; }
+        .art .tip { border-left: 4px solid #E60000; padding: .9rem 1.2rem; border-radius: 0 .75rem .75rem 0; margin: 1.4rem 0; }
+        .art .prompt-box { font-family: ui-monospace, monospace; font-size: .9rem; padding: 1rem 1.2rem; border-radius: .75rem; margin: 1rem 0 1.4rem; }
+        .art table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: .92rem; }
+        .art th { text-align: left; font-weight: 700; padding: .6rem .8rem; border-bottom: 2px solid #E60000; }
+        .art td { padding: .6rem .8rem; border-bottom: 1px solid rgba(128,128,128,.25); vertical-align: top; }
+        .gated-locked { max-height: 480px; overflow: hidden; }
+        .gated-locked > * { filter: blur(6px); user-select: none; pointer-events: none; }
+    </style>
+</head>
+<body class="font-sans text-[#333333] dark:text-gray-300 bg-white dark:bg-[#0a0a0a] min-h-screen transition-colors duration-300">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+</svg>
+
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-[#0a0a0a]/90 backdrop-blur border-b border-gray-100 dark:border-gray-800 py-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <a href="../index.html" class="flex items-center gap-2 font-bold text-xl tracking-tighter text-black dark:text-white">
+            <span>Rasťo <span class="text-[#E60000]">Kozlík</span></span> <span class="hidden sm:inline text-[#54595F] font-light">|</span> <span class="hidden sm:inline text-xs uppercase tracking-widest font-medium mt-1 text-[#54595F] dark:text-gray-400">AI Konzultant</span>
+        </a>
+        <div class="flex items-center gap-3">
+            <a href="../index.html#clanky" class="flex items-center gap-2 text-sm font-medium text-[#333333] dark:text-gray-300 hover:text-[#E60000] transition-colors">
+                <svg class="icon w-4 h-4"><use href="#i-back"/></svg> Všetky články
+            </a>
+            <button data-theme-toggle aria-label="Prepnúť svetlý/tmavý režim" class="p-2 rounded-full text-[#333333] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                <svg class="icon w-5 h-5 hidden dark:block"><use href="#i-sun"/></svg>
+                <svg class="icon w-5 h-5 dark:hidden"><use href="#i-moon"/></svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<main>
+<article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+
+    <header class="mb-10">
+        <span class="inline-flex items-center gap-2 bg-red-50 dark:bg-red-950/40 text-[#E60000] text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full border border-red-100 dark:border-red-900/50">Pre začiatočníkov</span>
+        <h1 class="text-3xl lg:text-5xl font-extrabold text-black dark:text-white mt-5 leading-tight">Ako začať s AI: sprievodca pre úplných začiatočníkov</h1>
+        <div class="flex items-center gap-4 mt-5 text-sm text-[#54595F] dark:text-gray-400">
+            <span class="flex items-center gap-1.5"><svg class="icon w-4 h-4"><use href="#i-clock"/></svg> 10 min čítania</span>
+            <span>·</span><span>Máj 2026</span>
+            <span>·</span><span>Rasťo Kozlík</span>
+        </div>
+    </header>
+
+    <div class="art text-[17px]">
+        <p class="text-lg font-medium text-black dark:text-white">Umelá inteligencia už nie je téma pre technológov – je to pracovný nástroj dostupný každému, kto vie napísať vetu. Napriek tomu väčšina ľudí, ktorých na školeniach stretávam, AI buď nepoužíva vôbec, alebo z nej vyťaží zlomok. Rozdiel pritom nerobí technické nadanie, ale pár základných návykov.</p>
+
+        <p>Tento sprievodca je destilát toho, čo učím úplných začiatočníkov: čo si vybrať ako prvé, ako písať zadania a ktorým chybám sa vyhnúť.</p>
+
+        <h2 class="text-black dark:text-white">Zorientujte sa: štyri kategórie, ktoré stačí poznať</h2>
+        <table>
+            <tr><th>Kategória</th><th>Na čo slúži</th><th>Príklady</th></tr>
+            <tr><td><strong>AI asistenti (chatboty)</strong></td><td>texty, otázky, analýza, preklady</td><td>ChatGPT, Claude, Gemini, Copilot</td></tr>
+            <tr><td><strong>Generátory obrázkov</strong></td><td>vizuály z textového popisu</td><td>Midjourney, DALL-E, Canva AI</td></tr>
+            <tr><td><strong>Audio a video</strong></td><td>hlas, hudba, prepisy, video</td><td>ElevenLabs, Suno, HeyGen</td></tr>
+            <tr><td><strong>Práca s dokumentmi</strong></td><td>analýza vlastných podkladov</td><td>NotebookLM, Perplexity</td></tr>
+        </table>
+        <p>Na začiatok potrebujete len prvú kategóriu. AI asistent je univerzálny nástroj – zvyšok pridáte, keď budete vedieť, na čo.</p>
+    </div>
+
+    <div id="gate-wrap" class="relative">
+        <div id="gated" class="gated-locked art text-[17px]">
+
+            <h2 class="text-black dark:text-white">Prvý krok: jeden asistent, jedna reálna úloha</h2>
+            <p>Založte si bezplatný účet na jednom z asistentov (ChatGPT, Claude alebo Gemini – pre začiatok je jedno ktorý) a dajte mu <strong>skutočnú úlohu z vášho dňa</strong>. Nie testovaciu otázku typu „čo vieš", ale niečo, čo vás dnes čaká: e-mail, zhrnutie dokumentu, príprava na stretnutie.</p>
+            <p>Práve tým sa oddelíte od väčšiny – AI sa nenaučíte čítaním o nej, ale používaním na vlastných úlohách.</p>
+
+            <h2 class="text-black dark:text-white">Najdôležitejšia zručnosť: dobré zadanie</h2>
+            <p>Kvalita odpovede je priamo úmerná kvalite zadania (promptu). Porovnajte:</p>
+            <div class="prompt-box bg-gray-100 dark:bg-[#161616] text-black dark:text-gray-200">❌ Napíš mi e-mail.</div>
+            <div class="prompt-box bg-gray-100 dark:bg-[#161616] text-black dark:text-gray-200">✅ Napíš profesionálny e-mail zákazníkovi, ktorý sa sťažoval na neskoré dodanie. Tón ospravedlňujúci, ale sebavedomý. Ponúkni konkrétne riešenie – zľavu 10 % na ďalší nákup. Max. 150 slov, po slovensky.</div>
+            <p>Štyri prvky, ktoré robia rozdiel:</p>
+            <ul>
+                <li><strong>Rola:</strong> „Si skúsený HR konzultant…" – AI prispôsobí odbornosť aj tón.</li>
+                <li><strong>Kontext:</strong> kto ste, pre koho je výstup, čo je cieľ.</li>
+                <li><strong>Formát:</strong> tabuľka, odrážky, počet slov, jazyk.</li>
+                <li><strong>Iterácia:</strong> prvý výstup je draft – pýtajte si úpravy („skráť", „pridaj príklady", „formálnejšie").</li>
+            </ul>
+            <div class="tip bg-red-50/60 dark:bg-red-950/20">
+                <p class="!mb-0"><strong>Tip zo školení:</strong> vytvorte si vlastnú zbierku promptov na opakované úlohy. Raz dobre napísané zadanie používate roky – len meníte vstupy.</p>
+            </div>
+
+            <h2 class="text-black dark:text-white">Kde AI nasadiť ako prvé</h2>
+            <h3 class="text-black dark:text-white">V práci</h3>
+            <ul>
+                <li>odpovede na náročné alebo nepríjemné e-maily,</li>
+                <li>zhrnutia dlhých dokumentov a vlákien,</li>
+                <li>prvé drafty reportov, prezentácií, inzerátov,</li>
+                <li>brainstorming – otázky na pohovor, nápady na kampaň, štruktúra projektu.</li>
+            </ul>
+            <h3 class="text-black dark:text-white">V osobnom živote</h3>
+            <ul>
+                <li>plánovanie (dovolenka, jedálniček, rozpočet),</li>
+                <li>vysvetlenie čohokoľvek jednoducho („vysvetli mi to, ako keby som mal 12 rokov"),</li>
+                <li>precvičovanie cudzieho jazyka konverzáciou.</li>
+            </ul>
+
+            <h2 class="text-black dark:text-white">Päť chýb začiatočníkov</h2>
+            <ol>
+                <li><strong>Očakávajú dokonalý výsledok na prvý pokus.</strong> AI je dialóg, nie automat na hotové výstupy.</li>
+                <li><strong>Píšu vágne zadania.</strong> Všeobecná otázka = všeobecná odpoveď.</li>
+                <li><strong>Slepo veria výstupom.</strong> AI vie presvedčivo tvrdiť nepravdu (tzv. halucinácie). Fakty, čísla a citácie overujte – za výsledok zodpovedáte vy.</li>
+                <li><strong>Vkladajú citlivé údaje.</strong> Heslá, rodné čísla, osobné údaje iných ľudí a firemné tajomstvá do verejných chatov nepatria.</li>
+                <li><strong>Vzdajú to po prvom neúspechu.</strong> Promptovanie je zručnosť – zlepšuje sa praxou, nie talentom.</li>
+            </ol>
+
+            <h2 class="text-black dark:text-white">Plán na prvý týždeň</h2>
+            <table>
+                <tr><th>Deň</th><th>Úloha (10–15 minút)</th></tr>
+                <tr><td>Pondelok</td><td>Založiť účet, prvá konverzácia na ľubovoľnú tému</td></tr>
+                <tr><td>Utorok</td><td>Nechať AI napísať jeden reálny e-mail</td></tr>
+                <tr><td>Streda</td><td>Zhrnutie dlhého dokumentu alebo článku</td></tr>
+                <tr><td>Štvrtok</td><td>Brainstorming k úlohe, ktorá vás čaká</td></tr>
+                <tr><td>Piatok</td><td>Vylepšiť jedno zadanie z týždňa o rolu + formát</td></tr>
+                <tr><td>Víkend</td><td>Vyskúšať jeden ďalší nástroj (napr. NotebookLM na dokumenty)</td></tr>
+            </table>
+            <p>Po týždni budete vedieť viac ako väčšina ľudí okolo vás. Nie preto, že ste prečítali viac článkov – ale preto, že ste AI použili na vlastných úlohách.</p>
+        </div>
+
+        <div id="gate-overlay" class="absolute inset-x-0 bottom-0 pt-40 bg-gradient-to-t from-white via-white/95 to-transparent dark:from-[#0a0a0a] dark:via-[#0a0a0a]/95">
+            <div class="max-w-xl mx-auto bg-gray-50 dark:bg-[#141414] rounded-3xl border border-gray-200 dark:border-gray-800 p-8 shadow-xl">
+                <div class="flex items-center justify-center gap-2 text-[#E60000] mb-3"><svg class="icon w-5 h-5"><use href="#i-lock"/></svg><span class="text-xs font-bold tracking-widest uppercase">Pokračovanie článku</span></div>
+                <h3 class="text-xl font-bold text-black dark:text-white mb-2 text-center">Odomknite si celý článok zadarmo</h3>
+                <p class="text-sm text-[#54595F] dark:text-gray-400 text-center mb-6">Zadajte e-mail a okamžite sa vám odomknú všetky články na tomto webe.</p>
+                <form id="gate-form" novalidate>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <label for="gate-email" class="sr-only">Váš e-mail</label>
+                        <input type="email" id="gate-email" name="email" required placeholder="vas@email.sk"
+                            class="flex-grow px-5 py-3.5 rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-[#0f0f0f] text-black dark:text-white focus:border-[#E60000] focus:outline-none transition-colors">
+                        <button type="submit" id="gate-submit"
+                            class="bg-[#E60000] hover:bg-[#C80000] disabled:opacity-60 disabled:cursor-not-allowed text-white px-7 py-3.5 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl whitespace-nowrap">
+                            Odomknúť článok
+                        </button>
+                    </div>
+                    <label class="flex items-start gap-3 mt-4 cursor-pointer">
+                        <input type="checkbox" id="gate-consent" required class="mt-1 w-4 h-4 accent-[#E60000]">
+                        <span class="text-xs text-[#54595F] dark:text-gray-400 leading-relaxed">
+                            Súhlasím so spracovaním e-mailovej adresy na sprístupnenie obsahu a občasných praktických AI tipov. Odhlásiť sa môžete kedykoľvek. Viac v <a href="../ochrana-sukromia.html" class="underline hover:text-[#E60000]">zásadách ochrany súkromia</a>.
+                        </span>
+                    </label>
+                    <p id="gate-status" class="hidden"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <aside class="mt-14 bg-gradient-to-br from-[#E60000] to-[#AA0000] text-white rounded-3xl p-8 lg:p-10">
+        <h2 class="text-2xl font-extrabold mb-3">Chcete tieto základy zvládnuť za jeden deň?</h2>
+        <p class="text-white/90 mb-6 leading-relaxed">Workshop <strong>Krok do sveta AI</strong> prevedie celý tím od prvých promptov po bezpečné používanie – na vašich vlastných pracovných úlohách. A hotové prompty na stiahnutie nájdete nižšie na stránke zadarmo.</p>
+        <a href="../index.html#workshopy" class="inline-block bg-white text-[#E60000] px-7 py-3.5 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">Pozrieť workshopy →</a>
+    </aside>
+</article>
+</main>
+
+<footer class="border-t border-gray-100 dark:border-gray-800 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-[#54595F] dark:text-gray-500">
+        <p>© <span data-year></span> Rasťo Kozlík · AI Konzultant. Všetky práva vyhradené.</p>
+        <span class="hidden sm:inline text-gray-300 dark:text-gray-700">|</span>
+        <a href="../ochrana-sukromia.html" class="underline hover:text-[#E60000]">Ochrana súkromia a cookies</a>
+    </div>
+</footer>
+
+<script src="./gate.js"></script>
+</body>
+</html>

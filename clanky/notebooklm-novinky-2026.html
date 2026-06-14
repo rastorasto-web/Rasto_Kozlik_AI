@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NotebookLM v roku 2026: 5 noviniek pre prácu s dokumentmi | Rasťo Kozlík</title>
+    <meta name="description" content="NotebookLM od Googlu dostal video prehľady, nové infografiky, podporu EPUB, históriu konverzácií a chytrejšie kvízy. Ako tieto novinky využiť vo firemnej praxi.">
+    <meta name="robots" content="index, follow">
+    <!-- ⚠️ NAHRAĎ doménou po nasadení -->
+    <link rel="canonical" href="https://VASA-DOMENA.sk/clanky/notebooklm-novinky-2026.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="sk_SK">
+    <meta property="og:title" content="NotebookLM v roku 2026: 5 noviniek pre prácu s dokumentmi">
+    <meta property="og:description" content="Video prehľady, nové infografiky, EPUB, história konverzácií a chytrejšie kvízy – ako ich využiť vo firemnej praxi.">
+    <meta property="og:url" content="https://VASA-DOMENA.sk/clanky/notebooklm-novinky-2026.html">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class' };</script>
+    <script>
+        try {
+            const s = localStorage.getItem('rk-theme');
+            if (s === 'dark' || (!s && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            }
+        } catch (e) {}
+    </script>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <style>
+        .icon { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .art h2 { font-size: 1.6rem; line-height: 1.3; font-weight: 800; margin: 2.4rem 0 1rem; }
+        .art h3 { font-size: 1.2rem; font-weight: 700; margin: 1.8rem 0 .7rem; }
+        .art p  { margin: 0 0 1.1rem; line-height: 1.75; }
+        .art ul, .art ol { margin: 0 0 1.2rem 1.4rem; line-height: 1.7; }
+        .art ul { list-style: disc; }
+        .art ol { list-style: decimal; }
+        .art li { margin-bottom: .45rem; }
+        .art strong { font-weight: 700; }
+        .art .tip { border-left: 4px solid #E60000; padding: .9rem 1.2rem; border-radius: 0 .75rem .75rem 0; margin: 1.4rem 0; }
+        .gated-locked { max-height: 480px; overflow: hidden; }
+        .gated-locked > * { filter: blur(6px); user-select: none; pointer-events: none; }
+    </style>
+</head>
+<body class="font-sans text-[#333333] dark:text-gray-300 bg-white dark:bg-[#0a0a0a] min-h-screen transition-colors duration-300">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+</svg>
+
+<nav class="sticky top-0 z-50 bg-white/90 dark:bg-[#0a0a0a]/90 backdrop-blur border-b border-gray-100 dark:border-gray-800 py-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <a href="../index.html" class="flex items-center gap-2 font-bold text-xl tracking-tighter text-black dark:text-white">
+            <span>Rasťo <span class="text-[#E60000]">Kozlík</span></span> <span class="hidden sm:inline text-[#54595F] font-light">|</span> <span class="hidden sm:inline text-xs uppercase tracking-widest font-medium mt-1 text-[#54595F] dark:text-gray-400">AI Konzultant</span>
+        </a>
+        <div class="flex items-center gap-3">
+            <a href="../index.html#clanky" class="flex items-center gap-2 text-sm font-medium text-[#333333] dark:text-gray-300 hover:text-[#E60000] transition-colors">
+                <svg class="icon w-4 h-4"><use href="#i-back"/></svg> Všetky články
+            </a>
+            <button data-theme-toggle aria-label="Prepnúť svetlý/tmavý režim" class="p-2 rounded-full text-[#333333] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                <svg class="icon w-5 h-5 hidden dark:block"><use href="#i-sun"/></svg>
+                <svg class="icon w-5 h-5 dark:hidden"><use href="#i-moon"/></svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<main>
+<article class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+
+    <header class="mb-10">
+        <span class="inline-flex items-center gap-2 bg-red-50 dark:bg-red-950/40 text-[#E60000] text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full border border-red-100 dark:border-red-900/50">Sprievodca</span>
+        <h1 class="text-3xl lg:text-5xl font-extrabold text-black dark:text-white mt-5 leading-tight">NotebookLM v roku 2026: 5 noviniek pre prácu s dokumentmi</h1>
+        <div class="flex items-center gap-4 mt-5 text-sm text-[#54595F] dark:text-gray-400">
+            <span class="flex items-center gap-1.5"><svg class="icon w-4 h-4"><use href="#i-clock"/></svg> 8 min čítania</span>
+            <span>·</span><span>Máj 2026</span>
+            <span>·</span><span>Rasťo Kozlík</span>
+        </div>
+    </header>
+
+    <div class="art text-[17px]">
+        <p class="text-lg font-medium text-black dark:text-white">NotebookLM je podľa mňa najpodceňovanejší AI nástroj pre prácu s dokumentmi – a je zadarmo. Nahráte doň vlastné podklady (PDF, weby, dokumenty) a on odpovedá výhradne z nich. Žiadne vymýšľanie z internetu: keď odpoveď v podkladoch nie je, povie to. V roku 2026 pribudlo päť noviniek, ktoré z neho robia plnohodnotného pracovného parťáka.</p>
+
+        <p>Prejdem ich z pohľadu firemného použitia – interné smernice, onboarding, príprava školení, práca s dlhými dokumentmi.</p>
+
+        <h2 class="text-black dark:text-white">Prečo NotebookLM a nie bežný chat</h2>
+        <p>Kľúčový rozdiel oproti ChatGPT či Gemini: NotebookLM pracuje <strong>iba s tým, čo mu dáte</strong>. Každú odpoveď podloží citáciou z vášho dokumentu, na ktorú sa dá kliknúť. Pre prácu s firemnými podkladmi je to presne to, čo potrebujete – minimum halucinácií, maximum dohľadateľnosti. Stačí Google účet a adresa notebooklm.google.com.</p>
+    </div>
+
+    <div id="gate-wrap" class="relative">
+        <div id="gated" class="gated-locked art text-[17px]">
+
+            <h2 class="text-black dark:text-white">1. Video prehľady</h2>
+            <p>NotebookLM už dlhšie vie z vašich dokumentov vygenerovať audio prehľad – dialóg dvoch moderátorov, ktorý znie ako podcast. Novinkou sú <strong>video prehľady</strong>: z podkladov vznikne krátke video s vizuálnymi prvkami a hovoreným komentárom.</p>
+            <p>Firemné použitie: z 50-stranovej smernice vyrobíte 5-minútové video pre onboarding nových kolegov. Z podkladov k produktu video pre obchodníkov. Ľudia, ktorí by smernicu nikdy neprečítali, si video pozrú.</p>
+
+            <h2 class="text-black dark:text-white">2. Desať štýlov infografík</h2>
+            <p>Z dvoch pôvodných formátov je desať – časové osi, myšlienkové mapy, porovnávacie tabuľky, procesné diagramy či dátové vizualizácie. Jedným klikom z textových podkladov.</p>
+            <ul>
+                <li><strong>HR:</strong> proces náboru ako diagram pre hiring manažérov.</li>
+                <li><strong>Kvalita:</strong> postup reklamácie ako časová os.</li>
+                <li><strong>Školenia:</strong> myšlienková mapa kľúčových pojmov z materiálov.</li>
+            </ul>
+            <p>Nájdete ich v paneli Studio → Create Infographic.</p>
+
+            <h2 class="text-black dark:text-white">3. Podpora EPUB</h2>
+            <p>K PDF, webom a Google dokumentom pribudol formát elektronických kníh EPUB. Odbornú literatúru, ktorú máte v čítačke, teraz nahráte priamo a môžete sa jej pýtať otázky, nechať si vysvetliť pasáže či vygenerovať súhrn kapitoly.</p>
+
+            <h2 class="text-black dark:text-white">4. Uložená história konverzácií</h2>
+            <p>Doteraz každý návrat do notebooku znamenal začínať odznova. Teraz sa <strong>celá história otázok a odpovedí ukladá</strong> – pri dlhších projektoch nadviažete presne tam, kde ste skončili. V zdieľaných notebookoch vidíte aj históriu kolegov, čo je praktické pri spoločnej príprave podkladov.</p>
+            <div class="tip bg-red-50/60 dark:bg-red-950/20">
+                <p class="!mb-0"><strong>Tip:</strong> používajte históriu ako výskumný denník – na konci práce si prebehnite posledné otázky a odpovede. Pri ďalšom sedení ušetríte čas na pripomínanie kontextu.</p>
+            </div>
+
+            <h2 class="text-black dark:text-white">5. Chytrejšie kvízy a sledovanie pokroku</h2>
+            <p>Kvízy generované z vašich podkladov dostali adaptívnu obtiažnosť (správne odpovede = ťažšie otázky), sledovanie pokroku po témach a kartičky s opakovaním toho, čo vám nejde. Výsledky sa dajú exportovať.</p>
+            <p>Pre interné vzdelávanie je to nenápadne silná vec: z BOZP smernice, produktových materiálov či compliance dokumentov vyrobíte test na pár klikov – a vidíte, kde majú ľudia medzery.</p>
+
+            <h2 class="text-black dark:text-white">Funguje to po slovensky?</h2>
+            <p>Áno. Podklady môžu byť v slovenčine, češtine aj angličtine – pokojne zmiešané – a otázky aj odpovede fungujú v slovenčine. Jazyková bariéra tu nie je dôvod čakať.</p>
+
+            <h2 class="text-black dark:text-white">Vyskúšajte ešte dnes</h2>
+            <ol>
+                <li>Otvorte notebooklm.google.com a prihláste sa Google účtom.</li>
+                <li>Vytvorte nový notebook a nahrajte jeden reálny pracovný dokument (smernicu, manuál, report).</li>
+                <li>Spýtajte sa: „Zhrň hlavné body tohto dokumentu v 5 odrážkach."</li>
+                <li>V paneli Studio vygenerujte infografiku alebo audio prehľad z toho istého dokumentu.</li>
+            </ol>
+            <p>Desať minút – a budete vedieť, či má NotebookLM miesto vo vašich procesoch. Pri práci s internými dokumentmi je moja odpoveď takmer vždy áno.</p>
+        </div>
+
+        <div id="gate-overlay" class="absolute inset-x-0 bottom-0 pt-40 bg-gradient-to-t from-white via-white/95 to-transparent dark:from-[#0a0a0a] dark:via-[#0a0a0a]/95">
+            <div class="max-w-xl mx-auto bg-gray-50 dark:bg-[#141414] rounded-3xl border border-gray-200 dark:border-gray-800 p-8 shadow-xl">
+                <div class="flex items-center justify-center gap-2 text-[#E60000] mb-3"><svg class="icon w-5 h-5"><use href="#i-lock"/></svg><span class="text-xs font-bold tracking-widest uppercase">Pokračovanie článku</span></div>
+                <h3 class="text-xl font-bold text-black dark:text-white mb-2 text-center">Odomknite si celý článok zadarmo</h3>
+                <p class="text-sm text-[#54595F] dark:text-gray-400 text-center mb-6">Zadajte e-mail a okamžite sa vám odomknú všetky články na tomto webe.</p>
+                <form id="gate-form" novalidate>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <label for="gate-email" class="sr-only">Váš e-mail</label>
+                        <input type="email" id="gate-email" name="email" required placeholder="vas@email.sk"
+                            class="flex-grow px-5 py-3.5 rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-[#0f0f0f] text-black dark:text-white focus:border-[#E60000] focus:outline-none transition-colors">
+                        <button type="submit" id="gate-submit"
+                            class="bg-[#E60000] hover:bg-[#C80000] disabled:opacity-60 disabled:cursor-not-allowed text-white px-7 py-3.5 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl whitespace-nowrap">
+                            Odomknúť článok
+                        </button>
+                    </div>
+                    <label class="flex items-start gap-3 mt-4 cursor-pointer">
+                        <input type="checkbox" id="gate-consent" required class="mt-1 w-4 h-4 accent-[#E60000]">
+                        <span class="text-xs text-[#54595F] dark:text-gray-400 leading-relaxed">
+                            Súhlasím so spracovaním e-mailovej adresy na sprístupnenie obsahu a občasných praktických AI tipov. Odhlásiť sa môžete kedykoľvek. Viac v <a href="../ochrana-sukromia.html" class="underline hover:text-[#E60000]">zásadách ochrany súkromia</a>.
+                        </span>
+                    </label>
+                    <p id="gate-status" class="hidden"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <aside class="mt-14 bg-gradient-to-br from-[#E60000] to-[#AA0000] text-white rounded-3xl p-8 lg:p-10">
+        <h2 class="text-2xl font-extrabold mb-3">NotebookLM na vašich firemných dokumentoch</h2>
+        <p class="text-white/90 mb-6 leading-relaxed">Na workshopoch ukazujem, ako z interných smerníc, manuálov a podkladov spraviť použiteľné materiály – videá, infografiky aj testy. Praktické cvičenia na vašich vlastných dokumentoch.</p>
+        <a href="../index.html#workshopy" class="inline-block bg-white text-[#E60000] px-7 py-3.5 rounded-xl font-bold hover:bg-gray-100 transition-colors shadow-lg">Pozrieť workshopy →</a>
+    </aside>
+</article>
+</main>
+
+<footer class="border-t border-gray-100 dark:border-gray-800 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-[#54595F] dark:text-gray-500">
+        <p>© <span data-year></span> Rasťo Kozlík · AI Konzultant. Všetky práva vyhradené.</p>
+        <span class="hidden sm:inline text-gray-300 dark:text-gray-700">|</span>
+        <a href="../ochrana-sukromia.html" class="underline hover:text-[#E60000]">Ochrana súkromia a cookies</a>
+    </div>
+</footer>
+
+<script src="./gate.js"></script>
+</body>
+</html>
